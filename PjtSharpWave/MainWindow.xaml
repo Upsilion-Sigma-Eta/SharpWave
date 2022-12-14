@@ -1,0 +1,73 @@
+﻿<Window x:Class="PjtSharpWave.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  
+        xmlns:view="clr-namespace:PjtSharpWave.View"
+        xmlns:local="clr-namespace:PjtSharpWave"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen" 
+        Title="MainWindow" Height="850" Width="1400">
+    <Border BorderBrush="#4d4d4f" BorderThickness="4" CornerRadius="10">
+        <Grid Background="White">
+
+            <Grid>
+                <!-- 메인 윈도우 그리드 분할 -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+
+                <!-- 상단 메뉴 바 -->
+                <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Background="White">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Margin="5"
+                                    Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" 
+                                    Foreground="LightGreen" Cursor="Hand">
+                            <materialDesign:PackIcon Kind="Circle" Width="15" Height="15"/>
+                        </Button>
+                        <Button  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Margin="5"
+                                    Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" 
+                                    Foreground="Orange" Cursor="Hand"
+                                    
+                                    >
+                            <materialDesign:PackIcon Kind="Circle" Width="15" Height="15"/>
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Margin="5"
+                                    Width="20" Height="20" Background="{x:Null}" BorderBrush="{x:Null}" 
+                                    Foreground="Red" Cursor="Hand" >
+                            <materialDesign:PackIcon Kind="Circle" Width="15" Height="15"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <!-- 상단 메뉴 바 끝-->
+
+
+                <!-- 중단 음악 리스트-->
+                <Grid Grid.Column="2" Grid.Row="1" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="2" Margin="5">
+                        <view:GridMusicList />
+                    </Grid>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+    </Border>
+</Window>
