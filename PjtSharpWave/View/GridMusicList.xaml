@@ -3,15 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PjtSharpWave.ViewModel"
         mc:Ignorable="d"
-        d:DesignHeight="600"
-        d:DesignWidth="250" >
-    <Grid>
-        <DataGrid>
+        Background="#181818">
+    <Grid >
+        <DataGrid ItemsSource="{Binding MusicList, UpdateSourceTrigger=PropertyChanged}" Background="#181818" AutoGenerateColumns="False" IsReadOnly="True" Width="Auto">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="" />
-                <DataGridTextColumn Header="아티스트"/>
-                <DataGridTextColumn Header="가수명"/>
+                <DataGridTextColumn Foreground="White" Width="*" Binding="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

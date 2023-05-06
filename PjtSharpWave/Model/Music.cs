@@ -16,17 +16,17 @@ namespace PjtSharpWave.Model
         /// <summary>
         /// 곡 이름
         /// </summary>
-        private string _musicName = string.Empty;
-        public string MusicName
+        private string _title = string.Empty;
+        public string Title
         {
             get
             {
-                return this._musicName;
+                return this._title;
             }
             set
             {
-                this._musicName = value;
-                OnPropertyChanged(p => p.MusicName);
+                this._title = value;
+                OnPropertyChanged(p => p.Title);
             }
         }
     }

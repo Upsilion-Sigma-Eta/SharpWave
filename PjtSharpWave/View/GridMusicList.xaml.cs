@@ -1,6 +1,6 @@
 ﻿using PjtSharpWave.Common;
+using System.Windows;
 using System.Windows.Controls;
-
 namespace PjtSharpWave.View
 {
     /// <summary>
@@ -8,10 +8,6 @@ namespace PjtSharpWave.View
     /// </summary>
     public partial class GridMusicList : UserControl
     {
-        #region Variable and Properties
-
-        #endregion
-
         #region Constructor
         public GridMusicList()
         {
